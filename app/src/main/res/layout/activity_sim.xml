@@ -6,18 +6,80 @@
     android:layout_height="match_parent"
     tools:context=".SIM">
 
-    <TextView
-        android:id="@+id/pageTitle3"
-        android:layout_width="0dp"
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:autoText="false"
-        android:background="@color/colorPrimary"
-        android:gravity="center"
-        android:text="\nPage Title\n"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorAccent"
+        android:text="Home"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="172dp"
+        tools:layout_editor_absoluteY="195dp">
+
+        <TextView
+            android:id="@+id/pageTitle3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoText="false"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="\nPage Title\n"
+            android:textSize="18sp" />
+
+        <ScrollView
+            android:id="@+id/scheduleList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/scheduleLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/scheduleTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/addNewButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="50"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:paddingHorizontal="4dp"
+                        android:text="Add New Entry" />
+
+                    <Button
+                        android:id="@+id/confirmButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="50"
+                        android:backgroundTint="@color/colorAccent"
+                        android:paddingHorizontal="4dp"
+                        android:text="Confirm" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,11 +18,8 @@ class MainMenu : AppCompatActivity() {
 
         this.simButton.setOnClickListener {
             val intent = Intent(this, SIM ::class.java)
-            startActivity(intent)
-        }
-
-        this.aimButton.setOnClickListener {
-            val intent = Intent(this, AIM ::class.java)
+            // TODO: Implement checking for existing schedule
+            intent.putExtra("newSchedule", true)
             startActivity(intent)
         }
     }

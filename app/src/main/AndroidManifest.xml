@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AIM"></activity>
+        <activity android:name=".ModifySchedule"></activity>
         <activity android:name=".SIM" />
         <activity android:name=".TCM" />
         <activity android:name=".MainMenu" />
